@@ -7,6 +7,8 @@ import clsx from 'clsx'
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 import { generatePagination } from '@/app/lib/utils'
 
+
+
 export default function Pagination({ totalPages }: { totalPages: number }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -83,8 +85,6 @@ function PaginationArrow({ href, direction, isDisabled }: { href: string, direct
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <Link className={className} href={href}>
-      {icon}
-    </Link>
+    <Link className={className} href={href}>{icon}</Link>
   )
 }
