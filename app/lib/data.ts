@@ -72,7 +72,7 @@ export async function fetchCardData() {
       totalPendingInvoices
     }
   } catch (error) {
-    console.error('Database Error:', error)
+    console.error('Database Error: ', error)
     throw new Error('Failed to fetch card data.')
   }
 }
@@ -105,7 +105,7 @@ export async function fetchFilteredInvoices(query: string, currentPage: number) 
 
     return invoices
   } catch (error) {
-    console.error('Database Error:', error)
+    console.error('Database Error: ', error)
     throw new Error('Failed to fetch invoices.')
   }
 }
@@ -126,7 +126,7 @@ export async function fetchInvoicesPages(query: string) {
     const totalPages = Math.ceil(Number(data[0].count) / ITEMS_PER_PAGE)
     return totalPages
   } catch (error) {
-    console.error('Database Error:', error)
+    console.error('Database Error: ', error)
     throw new Error('Failed to fetch total number of invoices.')
   }
 }
@@ -143,7 +143,7 @@ export async function fetchInvoiceById(id: string) {
 
     return invoice[0]
   } catch (error) {
-    console.error('Database Error:', error)
+    console.error('Database Error: ', error)
     throw new Error('Failed to fetch invoice.')
   }
 }
@@ -158,7 +158,7 @@ export async function fetchCustomers() {
 
     return customers
   } catch (err) {
-    console.error('Database Error:', err)
+    console.error('Database Error: ', err)
     throw new Error('Failed to fetch all customers.')
   }
 }
@@ -189,7 +189,7 @@ export async function fetchFilteredCustomers(query: string) {
 
     return customers
   } catch (err) {
-    console.error('Database Error:', err)
+    console.error('Database Error: ', err)
     throw new Error('Failed to fetch customer table.')
   }
 }
